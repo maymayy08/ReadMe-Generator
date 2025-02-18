@@ -95,20 +95,22 @@ class ReadMeGenerator:
         console.print(f"🚀 Project Title: [bold cyan]{self.project_title}[/bold cyan]")
         console.print(f"📝 Project Description: [bold cyan]{self.project_description}[/bold cyan]")
         console.print(f"🛠️ Installation Instructions: [bold cyan]{self.project_description}[/bold cyan]")
-        console.print(f"🛠️ Usage Instructions: [bold cyan]{self.usage_instructions}[/bold cyan]")
-        console.print(f"🛠️ License Selections: [bold cyan]{self.license_selections}[/bold cyan]")
+        console.print(f"📦 Usage Instructions: [bold cyan]{self.usage_instructions}[/bold cyan]")
+        console.print(f"📄📄 License Selections: [bold cyan]{self.license_selections}[/bold cyan]")
         console.print(f"📋 Contact: [bold cyan]{self.contact} [/bold cyan]")
   
     # Generate Readme template file
     def generate_template_readme(self):
-        readme_content =  (f"# 🚀 Project Title: {self.project_title}\n\n"
-                      f"## 📝 Project Description: {self.project_description}\n\n"
-                      f"### 🛠️ Installation Instructions:\n{self.installation_instructions}\n\n"
-                      f"### 🛠️ Usage Instructions:\n{self.usage_instructions}\n\n"
-                      f"### 🛠️ License: {self.license_selections}\n\n"
-                      f"### 📋 Contact: {self.contact}\n\n"
+        readme_content = (
+                      f"![Project Image](https://files.realpython.com/media/Creating-Good-README.md-Files-for-Your-Python-Projects_Watermarked.034ab572fa3e.jpg)\n\n"
+                      f"### 🚀 Project Title\n{self.project_title}\n\n" 
+                      f"### 📝 Project Description\n{self.project_description} \n\n"
+                      f"### 🛠️ Installation Instructions\n{self.installation_instructions} \n\n"
+                      f"### 📦 Usage Instructions\n{self.usage_instructions} \n\n"
+                      f"### 📄 License\n{self.license_selections} \n\n"
+                      f"### 📋 Contact\n{self.contact} \n\n"
                       f"---\n\n"
-                      f"Thank you for using this README generator! We hope you find it useful!😊\n\n")
+                      f"Thank you for using this README generator! We hope you find it useful! 🤗\n\n")
         # Get the current directory and create a readme file
         output_file_path = os.path.join(os.getcwd(), "readme.md")
         # Check if readme file exist, if exist, it will print out "File already existed!"
