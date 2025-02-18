@@ -1,4 +1,4 @@
-# Inport file to Main.py
+# Inport# Check if readme file exist, if exist, it will print out "File already existed!"
 from readme_generator import ReadMeGenerator
 
 def main():

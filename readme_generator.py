@@ -102,13 +102,14 @@ class ReadMeGenerator:
     # Generate Readme template file
     def generate_template_readme(self):
         readme_content = (
+                      f"## Welcome to ReadMe Generator✨" 
                       f"![Project Image](https://files.realpython.com/media/Creating-Good-README.md-Files-for-Your-Python-Projects_Watermarked.034ab572fa3e.jpg)\n\n"
-                      f"### 🚀 Project Title\n{self.project_title}\n\n" 
-                      f"### 📝 Project Description\n{self.project_description} \n\n"
-                      f"### 🛠️ Installation Instructions\n{self.installation_instructions} \n\n"
-                      f"### 📦 Usage Instructions\n{self.usage_instructions} \n\n"
-                      f"### 📄 License\n{self.license_selections} \n\n"
-                      f"### 📋 Contact\n{self.contact} \n\n"
+                      f"##### 🚀 Project Title\n{self.project_title}\n\n" 
+                      f"##### 📝 Project Description\n{self.project_description} \n\n"
+                      f"##### 🛠️ Installation Instructions\n{self.installation_instructions} \n\n"
+                      f"##### 📦 Usage Instructions\n{self.usage_instructions} \n\n"
+                      f"##### 📄 License\n{self.license_selections} \n\n"
+                      f"##### 📋 Contact\n{self.contact} \n\n"
                       f"---\n\n"
                       f"Thank you for using this README generator! We hope you find it useful! 🤗\n\n")
         # Get the current directory and create a readme file
