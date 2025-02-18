@@ -6,7 +6,6 @@ import os
 import time
 from rich.progress import track
 
-
 # Create a console object for rich formatting
 console = Console()
 
@@ -22,7 +21,8 @@ class ReadMeGenerator:
         self.license_selections = "" 
         self.confirm_license = False
         self.contact = ""
-    
+
+
     # Create function for prompt questions for users 
     def prompt_users(self):  
         # Define the questions to ask the user
@@ -74,12 +74,10 @@ class ReadMeGenerator:
             },
 
         ]
-
-
+        
         # Collect the answers using InquirerPy's prompt
         answers = prompt(questions)
         
-       
         # Store the answers as instance variables so they can be accessed later
         self.project_title = answers['project_title']
         self.project_description = answers['project_description']
@@ -96,7 +94,7 @@ class ReadMeGenerator:
         console.print(f"📝 Project Description: [bold cyan]{self.project_description}[/bold cyan]")
         console.print(f"🛠️ Installation Instructions: [bold cyan]{self.project_description}[/bold cyan]")
         console.print(f"📦 Usage Instructions: [bold cyan]{self.usage_instructions}[/bold cyan]")
-        console.print(f"📄📄 License Selections: [bold cyan]{self.license_selections}[/bold cyan]")
+        console.print(f"📄 License Selections: [bold cyan]{self.license_selections}[/bold cyan]")
         console.print(f"📋 Contact: [bold cyan]{self.contact} [/bold cyan]")
   
     # Generate Readme template file
@@ -112,8 +110,10 @@ class ReadMeGenerator:
                       f"##### 📋 Contact\n{self.contact} \n\n"
                       f"---\n\n"
                       f"Thank you for using this README generator! We hope you find it useful! 🤗\n\n")
+        
         # Get the current directory and create a readme file
         output_file_path = os.path.join(os.getcwd(), "readme.md")
+       
         # Check if readme file exist, if exist, it will print out "File already existed!"
         if os.path.exists("readme.md"):
             console.print("File already existed!")
@@ -122,6 +122,7 @@ class ReadMeGenerator:
                 file.write(readme_content)
             console.print("The current directory has been created at:", os.getcwd())
             console.print(f"🎉 Congraulation! You have now successfully created your own readme.md 🙌") 
+   
     # Create simulation for progress bar once readme file generated 
     def progress_simulation():
         console.print("[bold green]Generating readme.md file...")

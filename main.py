@@ -1,8 +1,17 @@
-# Inport# Check if readme file exist, if exist, it will print out "File already existed!"
+# Import file modules
 from readme_generator import ReadMeGenerator
+import pyfiglet
 
+# Create an instance of the main class (ReadMeGenerator)
 def main():
-    # Create an instance of the main class (ReadMeGenerator)
+
+    # Generate an ASCII art banner 
+    message = "Welcome"  
+    ascii_banner = pyfiglet.figlet_format(message, font="ghost")
+    
+    # Print the ASCII art in the console
+    print(ascii_banner)
+    
     output = ReadMeGenerator()
     # Prompt user for answer questions
     output.prompt_users()  
@@ -16,4 +25,7 @@ def main():
 # Execute Main 
 if __name__ == "__main__":
   main()
+
+
+
 
